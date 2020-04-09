@@ -64,24 +64,37 @@
 4.0 - ELEMENTS
 -------------------------------------------------------------- */
 /* -- FORMS -- */
+label {
+	display: none;
+}
 
-
+input {
+	display: inline;
+}
 
 /* -- LISTS -- */
 ul {
 	list-style: none;
 }
 
-.bg-blk li, nav li {
+.bg-blk li, nav li, footer li {
 	display: inline-block;
 
 }
 .bg-blk li {
-	padding: 20px;
+	margin: 10px 20px;
 }
-.bg-blk ul {
+
+
+
+.bg-blk ul, footer ul:first-of-type {
 	text-align: right;
 	font: 400 12px 'open sans', sans-serif;
+}
+
+footer ul:last-of-type {
+	margin: 0;
+	text-align: left;
 }
 /* -- MEDIA -- */
 #bg-mtn {
@@ -90,6 +103,8 @@ ul {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+	position: relative;
+	z-index: 0;
 }
 
 #logo {
@@ -102,8 +117,16 @@ ul {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+	position: relative;
+	top: -450px;
+	z-index: 1;
+	height: 900px;
 }
 
+
+#bg-img-crm div section {
+	top: 200px;
+}
 #bg-img-adventures {
 	background: url("../img/adventure.jpg") no-repeat center center scroll; 
   	-webkit-background-size: cover;
@@ -129,6 +152,11 @@ h2 {
 	text-transform: uppercase; 
 }
 
+h3 {
+	font: 700 12px 'open sans', sans serif;
+	text-align: center;
+}
+
 h2 span {
 	font-size: 40px;
 	color: #000;
@@ -138,6 +166,7 @@ p {
 	font: 400 15px 'eb garamond', serif;
 	padding-bottom: 40px;
 }
+
 /*--------------------------------------------------------------
 5.0 - OBJECTS
 -------------------------------------------------------------- */
@@ -155,8 +184,9 @@ a {
 }
 
 i {
-	display: inline-block;
+	margin: 0 auto;
 	padding-top: 100px;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -167,7 +197,7 @@ i {
 	width: 500px;
 }
 
-#bg-img-adventures p, .btn, #bg-wood p {
+#bg-img-adventures p, .btn, #bg-wood p, footer p, footer ul {
 	color: #ede9e1;
 }
 
@@ -175,8 +205,12 @@ i {
 	text-align: center;
 }
 
+footer {
+	text-align: left;
+}
+
 #bg-img-adventures div div {
-	padding: 150px 0;
+	margin: 50px 0 100px;
 }
 .btn {
 	width: 250px;
@@ -185,6 +219,11 @@ i {
 	margin: 0 auto;
 	text-transform: uppercase; 
 	
+}
+
+.btn-gry {
+	padding: 10px;
+	background-color: #888;
 }
 
 .btn:hover {
@@ -199,15 +238,49 @@ i {
 	color: #fff;
 }
 
-.bg-blk a:hover, nav li, h2 {
+.bg-blk a:hover, nav a, h2, h3 {
 	color: #ff7100;
 }
 
+nav a:hover {
+	color: #ede9e1;
+}
 
-
+a:visited {
+	text-decoration: none;
+}
 /* -- BUTTONS -- */
 
 /* -- HEADER -- */
+
+header {
+	text-align: center;
+}
+#bg-mtn div, nav ul li:nth-child(4), nav h1, #bg-img-crm div section, #bg-img-adventures, #bg-wood, footer {
+	position: relative;
+}
+
+footer {
+	top: 100px;
+}
+
+footer ul {
+	padding: 0;
+	text-align: left;
+}
+#bg-wood {
+	top: 100px;
+}
+#bg-white, q::before, q::after {
+	position: absolute;
+}
+
+#bg-white {
+	top: 1400px;
+	left: 215px;
+	margin-top: 50px;
+	margin-bottom: 300px;
+}
 
 #bg-mtn div {
 	width: 400px;
@@ -218,7 +291,7 @@ q {
 }
 
 #bg-mtn {
-	padding-bottom: 300px;
+	padding-bottom: 400px;
 }
 
 q {
@@ -227,15 +300,22 @@ q {
 
 q::before, q::after {
 	font-size: 50px;
+
+	
 }
 q::before {
 	content: open-quote;
+	left: -20px;
+	top: 20px;
 
 }
 
 q::after {
 	content: close-quote;
+	left: 380px;
+	top: 20px;
 }
+
 
 #circle {
 	width: 500px;
@@ -246,12 +326,18 @@ q::after {
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	background-image: url("../img/backpack.jpg");
+	position: absolute;
 }
+
+#bg-img-adventures {
+	top: 200px;
+}
+
+
 /* -- NAVIGATION -- */
 
 nav {
-	padding-bottom: 275px;
- 
+	padding-bottom: 275px
 }
 
 nav, #bg-mtn p, .btn {
@@ -265,36 +351,48 @@ nav ul {
 	margin: 0px;
 	padding: 0px;
 }
-nav li {
+
+
+nav h1 {
+	
+	top: 5px;
+	margin-right: 52px;
+}
+
+nav a {
 	font: 700 15px 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	padding-left: 0;
-	padding-right: 52px;
+	margin-right: 52px;
 }
 
 nav span {
 	font: 15px 'Pacifico', cursive;
 	text-transform: capitalize;
 } 
+footer section {
+	width: 150px;
+	margin-left: 30px;
+}
 
-#bg-wood section {
+#bg-wood section, footer section:first-child {
 	width: 375px;
-	padding: 50px 50px 50px 0;
 }
 #bg-wood section:last-child {
 	padding-right: 0px;
 }
-#circle, #bg-wood section {
+#circle, #bg-wood section, footer div div section  {
 	float: left;
 }
 
-#bg-white section, #bg-wood section:last-child {
+#bg-white section, #bg-wood section:last-child, footer div div section:last-child {
 	float: right;
 }
 
-#bg-img-adventures i {
+#bg-img-adventures i, #bg-wood a:first-of-type {
 	color: #ff7100;
 }
+
 
 /*--------------------------------------------------------------
 7.0 - UTILITIES
