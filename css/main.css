@@ -60,31 +60,30 @@
 	box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /*--------------------------------------------------------------
 4.0 - ELEMENTS
 -------------------------------------------------------------- */
+.bg-blk li, nav li, input, form p, #mtn-foot div, #social li {
+	display: inline-block;
+}
+
 /* -- FORMS -- */
 label {
 	display: none;
 }
 
-input {
-	display: inline;
-}
 
 /* -- LISTS -- */
 ul {
 	list-style: none;
 }
 
-.bg-blk li, nav li, footer li, form {
-	display: inline-block;
-
-}
 .bg-blk li {
-	margin: 10px 20px;
+	margin: 5px 25px;
 }
-
 
 
 .bg-blk ul, footer ul:first-of-type {
@@ -92,63 +91,40 @@ ul {
 	font: 400 12px 'open sans', sans-serif;
 }
 
+nav a:hover {
+	color: #ede9e1;
+}
+
 footer ul:last-of-type {
 	margin: 0;
 	text-align: left;
 }
+
+
+
+
+#mtn-foot div {
+	color: #888;
+	margin: 20px;
+}
+
+
 /* -- MEDIA -- */
-#bg-mtn {
-	background: url("../img/mtn.jpg") no-repeat center center scroll; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-	padding-bottom: 400px;
-	
-}
-
-#logo {
-	background: url("../img/logo.png")
-}
-
-#bg-img-crm {
-	background: url("../img/crm-mtns.png") no-repeat center center scroll; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-}
 
 
-
-#bg-img-adventures {
-	background: url("../img/adventure.jpg") no-repeat center center scroll; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-}
-
-#bg-wood {
-	background: url("../img/woodgrain.jpg") no-repeat center center scroll; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-}
 
 /* -- TABLES -- */
 
 /* -- TYPOGRAPHY -- */
-h2 {
-	font: 700 15px 'open sans', sans-serif;
-	text-align: center;
-	text-transform: uppercase; 
+h2, .btn, .btn-gry {
+	font: 700 15px 'open sans', sans-serif; 
 }
 
+h2, h3, .btn, .btn-gry, nav a {
+	text-transform: uppercase;
+}
 h3 {
 	font: 700 12px 'open sans', sans serif;
-	text-align: center;
 }
 
 h2 span {
@@ -158,7 +134,6 @@ h2 span {
 
 p {
 	font: 400 15px 'eb garamond', serif;
-	margin-bottom: 40px;
 }
 
 /*--------------------------------------------------------------
@@ -178,94 +153,166 @@ a {
 }
 
 i {
-	margin: 0 auto;
-	margin-top: 100px;
-	text-align: center;
-}
-
-/*--------------------------------------------------------------
-6.0 - COMPONENTS
--------------------------------------------------------------- */
-
-#bg-img-crm section, #bg-white section, #bg-img-adventures div div {
-	width: 500px;
-}
-
-#bg-img-crm section {
-	margin-top: -200px;
-}
-#bg-img-adventures p, .btn, #bg-wood p, footer p, footer ul {
-	color: #ede9e1;
-}
-
-#bg-img-adventures p:last-child, #bg-wood {
-	text-align: center;
-}
-
-footer {
-	text-align: left;
-}
-
-#bg-img-adventures div div {
-	margin: 50px 0 100px;
-}
-.btn {
-	background-color: #ff7100;
-	padding: 30px;
-	margin: 0 auto;
-	text-transform: uppercase; 
-	
-}
-
-.btn-gry {
-	padding: 10px;
-	background-color: #888;
-}
-
-.btn:hover {
-	background-color: #ede9e1;	
+	margin-top: 150px;
 }
 
 .bg-blk {
 	background-color: #000;
 }
 
+/*--------------------------------------------------------------
+6.0 - COMPONENTS
+-------------------------------------------------------------- */
+#bg-img-crm section, #bg-white section, #bg-img-adventures div div {
+	width: 500px;
+}
+
+#bg-img-adventures p, .btn, #bg-wood p, footer ul {
+	color: #ede9e1;
+}
+
+#bg-wood, #bg-img-adventures p, #social, #mtn-foot, h2, .btn, .btn-gry, h3, i, nav, #bg-mtn p, header {
+	text-align: center;
+}
+
+
+#bg-mtn {
+	background: url("../img/mtn.jpg") no-repeat center center scroll; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	-ms-background-size: cover;
+  	background-size: cover;
+	padding-bottom: 400px;
+	
+}
+
+#logo {
+	background: url("../img/logo.png")
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#fadein {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+#bg-img-crm {
+	background: url(../img/crm-mtns.png) no-repeat;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	-ms-background-size: cover;
+  	background-size: cover;
+	padding-bottom: 200px;
+	margin: -270px 0 100px;
+}
+
+
+#bg-img-crm div {
+	margin-bottom: 75px;
+}
+
+#bg-img-adventures {
+	background: url("../img/adventure.jpg") no-repeat; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	-ms-background-size: cover;
+  	background-size: cover;
+	padding-bottom: 100px;
+}
+#bg-img-adventures div div {
+	margin: 50px 0 50px;
+}
+
+#bg-wood {
+	background: url("../img/woodgrain.jpg") no-repeat; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	-ms-background-size: cover;
+  	background-size: cover;
+	padding: 40px 0;
+}
+
+input {
+	padding: 7px;
+}
+
+footer {
+	text-align: left;
+}
+
+footer ul, footer section, h3 {
+	color: #888;
+}
+footer i {
+	margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .bg-blk a {
 	color: #fff;
 }
 
-.bg-blk a:hover, nav a, h2, h3 {
+.bg-blk a:hover, nav a, h2, #bg-img-adventures i, #bg-wood a:first-of-type {
 	color: #ff7100;
 }
 
-nav a:hover {
-	color: #ede9e1;
+
+
+/* -- BUTTONS -- */
+.btn {
+	background-color: #ff7100;
+	padding: 10px;
+	 
+	
+	
+}
+.btn-gry {
+	background-color: #888;
+	padding: 10px 25px;
+}
+
+.btn:hover, .btn-gry:hover {
+	background-color: #ede9e1;	
 }
 
 a:visited {
 	text-decoration: none;
 }
-/* -- BUTTONS -- */
-
 /* -- HEADER -- */
 
-header {
-	text-align: center;
-}
-
-
-
-
-footer ul {
-	padding: 0;
-	text-align: left;
-}
-
-
 #bg-mtn div {
+	margin: 0 auto;
+	position: relative;
+	top: 0px;
+	left: 0px;
 	width: 400px;
 }
-q {
+#fadein {
 	font: 700 20px 'eb garamond', serif;
 	color: #ede9e1;
 	quotes: "“" "”" "‘" "’";
@@ -273,20 +320,20 @@ q {
 
 
 
-q::before, q::after {
+#fadein::before, #fadein::after {
 	font-size: 50px;
 	position: absolute;
 
 	
 }
-q::before {
+#fadein::before {
 	content: open-quote;
 	left: -20px;
 	top: 20px;
 
 }
 
-q::after {
+#fadein::after {
 	content: close-quote;
 	left: 380px;
 	top: 20px;
@@ -312,18 +359,11 @@ nav {
 	margin-bottom: 275px
 }
 
-nav, #bg-mtn p, .btn {
-	text-align: center;
-}
 
-#bg-mtn div {
-	margin: 0 auto;
-	position: relative;
-}
+
 
 nav ul {
 	margin: 0px;
-	padding: 0px;
 }
 
 
@@ -335,9 +375,8 @@ nav h1 {
 
 nav a {
 	font: 700 15px 'Open Sans', sans-serif;
-	text-transform: uppercase;
 	padding-left: 0;
-	margin-right: 52px;
+	margin-right: 40px;
 }
 
 nav span {
@@ -363,10 +402,33 @@ footer section {
 	float: right;
 }
 
-#bg-img-adventures i, #bg-wood a:first-of-type {
-	color: #ff7100;
+
+
+footer div {
+	margin-top: 40px;
 }
 
+
+footer ul {
+	padding: 0;
+	text-align: left;
+}
+
+
+
+#bg-img-adventures p {
+	margin: 40px 0;
+	
+}
+
+
+#social {
+	margin: 0 0 100px;
+}
+
+#social li {
+	padding: 0 100px;
+}
 
 /*--------------------------------------------------------------
 7.0 - UTILITIES
